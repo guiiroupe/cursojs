@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Nacionalidade</title>
+  <style>
+    body {
+      background-color: rgb(41, 46, 46);
+      color: antiquewhite;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Controle de Nacionalidade</h1>
+  Adicione o seu país de origem: <input type="text" name="txtn" id="txtn">
+  <input type="button" value="Verificar" onclick="check()">
+  <div id="nacionalidade"></div>
+
+  <script>
+    function check() {
+      var inpIni = document.querySelector('input#txtn');
+      var nacionalidade = document.querySelector('div#nacionalidade');
+      var origem = inpIni.value;
+      if (origem !== 'Brasil') {
+        nacionalidade.innerHTML = `Você não é Brasileiro!`;
+      } else {
+        nacionalidade.innerHTML = `Você é Brasileiro!`;
+      }
+    }
+  </script>
+</body>
+
+</html>
